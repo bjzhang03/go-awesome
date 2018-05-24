@@ -89,6 +89,8 @@ func main() {
 				go func(link string) {
 					worklist <- crawl(link)
 				}(link)
+				//这里的link是给匿名函数传递变量的行为
+				//link在作用域内
 			}
 		}
 	}
