@@ -1,0 +1,6 @@
+hash: 7b4cd001fc059d8658149f4d4983cef8bfabc6fb28b65bbc1b6eb8315b887c7e
+updated: 2018-05-18T10:05:06.016491+08:00
+imports:
+- name: github.com/ebuchman/fail-test
+  version: 95f809107225be108efcf10a3509e4ea6ceef3c4
+testImports: []

@@ -1,0 +1,41 @@
+operation before the app
+subcommand
+suc
+help
+h
+helpprinter test
+helpprinter test
+bashcompletehelpprinter test
+version = 1.0.0
+-------------------------------------------------------
+category.Name = : 
+
+category.Commands =: cli.Commands{cli.Command{Name:"help", ShortName:"", Aliases:[]string{"h"}, Usage:"Shows a list of commands or help for one command", UsageText:"", Description:"", ArgsUsage:"[command]", Category:"", BashComplete:(cli.BashCompleteFunc)(nil), Before:(cli.BeforeFunc)(nil), After:(cli.AfterFunc)(nil), Action:(func(*cli.Context) error)(0x1104050), OnUsageError:(cli.OnUsageErrorFunc)(nil), Subcommands:cli.Commands(nil), Flags:[]cli.Flag(nil), SkipFlagParsing:false, SkipArgReorder:false, HideHelp:false, Hidden:false, HelpName:"", commandNamePath:[]string(nil), CustomHelpTemplate:""}}
+
+category.VisibleCommands() =: []cli.Command{cli.Command{Name:"help", ShortName:"", Aliases:[]string{"h"}, Usage:"Shows a list of commands or help for one command", UsageText:"", Description:"", ArgsUsage:"[command]", Category:"", BashComplete:(cli.BashCompleteFunc)(nil), Before:(cli.BeforeFunc)(nil), After:(cli.AfterFunc)(nil), Action:(func(*cli.Context) error)(0x1104050), OnUsageError:(cli.OnUsageErrorFunc)(nil), Subcommands:cli.Commands(nil), Flags:[]cli.Flag(nil), SkipFlagParsing:false, SkipArgReorder:false, HideHelp:false, Hidden:false, HelpName:"", commandNamePath:[]string(nil), CustomHelpTemplate:""}}
+
+category.Name = : motion
+
+category.Commands =: cli.Commands{cli.Command{Name:"subcommand", ShortName:"", Aliases:[]string{"suc"}, Usage:"subcommand test", UsageText:"subcommand - test the cli subcommand function", Description:"subcommand test example", ArgsUsage:"[sub]", Category:"motion", BashComplete:(cli.BashCompleteFunc)(nil), Before:(cli.BeforeFunc)(0x1109b30), After:(cli.AfterFunc)(0x1109bd0), Action:(func(*cli.Context) error)(0x1109c70), OnUsageError:(cli.OnUsageErrorFunc)(0x110a0f0), Subcommands:cli.Commands(nil), Flags:[]cli.Flag{cli.BoolFlag{Name:"forever, forevvarr", Usage:"", EnvVar:"", Hidden:false, Destination:(*bool)(nil)}}, SkipFlagParsing:false, SkipArgReorder:false, HideHelp:false, Hidden:false, HelpName:"cli demo subcommand", commandNamePath:[]string(nil), CustomHelpTemplate:""}}
+
+category.VisibleCommands() =: []cli.Command{cli.Command{Name:"subcommand", ShortName:"", Aliases:[]string{"suc"}, Usage:"subcommand test", UsageText:"subcommand - test the cli subcommand function", Description:"subcommand test example", ArgsUsage:"[sub]", Category:"motion", BashComplete:(cli.BashCompleteFunc)(nil), Before:(cli.BeforeFunc)(0x1109b30), After:(cli.AfterFunc)(0x1109bd0), Action:(func(*cli.Context) error)(0x1109c70), OnUsageError:(cli.OnUsageErrorFunc)(0x110a0f0), Subcommands:cli.Commands(nil), Flags:[]cli.Flag{cli.BoolFlag{Name:"forever, forevvarr", Usage:"", EnvVar:"", Hidden:false, Destination:(*bool)(nil)}}, SkipFlagParsing:false, SkipArgReorder:false, HideHelp:false, Hidden:false, HelpName:"cli demo subcommand", commandNamePath:[]string(nil), CustomHelpTemplate:""}}
+
+c.App.Command("subcommand") =: &cli.Command{Name:"subcommand", ShortName:"", Aliases:[]string{"suc"}, Usage:"subcommand test", UsageText:"subcommand - test the cli subcommand function", Description:"subcommand test example", ArgsUsage:"[sub]", Category:"motion", BashComplete:(cli.BashCompleteFunc)(nil), Before:(cli.BeforeFunc)(0x1109b30), After:(cli.AfterFunc)(0x1109bd0), Action:(func(*cli.Context) error)(0x1109c70), OnUsageError:(cli.OnUsageErrorFunc)(0x110a0f0), Subcommands:cli.Commands(nil), Flags:[]cli.Flag{cli.BoolFlag{Name:"forever, forevvarr", Usage:"", EnvVar:"", Hidden:false, Destination:(*bool)(nil)}}, SkipFlagParsing:false, SkipArgReorder:false, HideHelp:false, Hidden:false, HelpName:"cli demo subcommand", commandNamePath:[]string(nil), CustomHelpTemplate:""}
+
+
+stringflag 123
+boolflag false
+********************************************************
+c.App.VisibleCategories() =: []*cli.CommandCategory{(*cli.CommandCategory)(0xc420072270), (*cli.CommandCategory)(0xc420072240)}
+
+c.App.VisibleCommands() =: []cli.Command{cli.Command{Name:"subcommand", ShortName:"", Aliases:[]string{"suc"}, Usage:"subcommand test", UsageText:"subcommand - test the cli subcommand function", Description:"subcommand test example", ArgsUsage:"[sub]", Category:"motion", BashComplete:(cli.BashCompleteFunc)(nil), Before:(cli.BeforeFunc)(0x1109b30), After:(cli.AfterFunc)(0x1109bd0), Action:(func(*cli.Context) error)(0x1109c70), OnUsageError:(cli.OnUsageErrorFunc)(0x110a0f0), Subcommands:cli.Commands(nil), Flags:[]cli.Flag{cli.BoolFlag{Name:"forever, forevvarr", Usage:"", EnvVar:"", Hidden:false, Destination:(*bool)(nil)}}, SkipFlagParsing:false, SkipArgReorder:false, HideHelp:false, Hidden:false, HelpName:"cli demo subcommand", commandNamePath:[]string(nil), CustomHelpTemplate:""}, cli.Command{Name:"help", ShortName:"", Aliases:[]string{"h"}, Usage:"Shows a list of commands or help for one command", UsageText:"", Description:"", ArgsUsage:"[command]", Category:"", BashComplete:(cli.BashCompleteFunc)(nil), Before:(cli.BeforeFunc)(nil), After:(cli.AfterFunc)(nil), Action:(func(*cli.Context) error)(0x1104050), OnUsageError:(cli.OnUsageErrorFunc)(nil), Subcommands:cli.Commands(nil), Flags:[]cli.Flag(nil), SkipFlagParsing:false, SkipArgReorder:false, HideHelp:false, Hidden:false, HelpName:"", commandNamePath:[]string(nil), CustomHelpTemplate:""}}
+
+c.App.VisibleFlags() =: []cli.Flag{cli.BoolFlag{Name:"boolflag", Usage:"", EnvVar:"", Hidden:false, Destination:(*bool)(nil)}, cli.StringFlag{Name:"stringflag", Usage:"", EnvVar:"", Hidden:false, Value:"123", Destination:(*string)(0x1218280)}, cli.BoolFlag{Name:"helpflag", Usage:"", EnvVar:"", Hidden:false, Destination:(*bool)(nil)}, cli.BoolFlag{Name:"version", Usage:"", EnvVar:"", Hidden:false, Destination:(*bool)(nil)}}
+
+""
+c.Args().Present() =: false
+
+c.Args().Tail() =: []string{}
+
+Success
+operation after the app

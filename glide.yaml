@@ -1,0 +1,27 @@
+package: bjzhang.com/godemo
+import:
+- package: github.com/ebuchman/fail-test
+  version: 95f809107225be108efcf10a3509e4ea6ceef3c4
+- package: golang.org/x/net
+- package: github.com/syndtr/goleveldb/leveldb
+- package: github.com/spf13/cobra
+- package: github.com/spf13/cobra/cobra
+- package: google.golang.org/grpc
+  version: v1.7.3
+  subpackages:
+  - balancer
+  - codes
+  - connectivity
+  - credentials
+  - grpclb/grpc_lb_v1/messages
+  - grpclog
+  - internal
+  - keepalive
+  - metadata
+  - naming
+  - peer
+  - resolver
+  - stats
+  - status
+  - tap
+  - transport
