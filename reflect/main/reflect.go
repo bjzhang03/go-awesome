@@ -32,8 +32,9 @@ func main() {
 	// 获取对象值 (<float64 Value>)
 	fmt.Println(reflect.ValueOf(x))
 
+	fmt.Println("***************************************************************")
 	// 对象
-	a := &MyStruct{name: "nljb"}
+	a := &MyStruct{name: "reflectexample"}
 	// 返回对象的方法的数量 (1)
 	fmt.Println(reflect.TypeOf(a).NumMethod())
 	// 遍历对象中的方法
@@ -49,14 +50,16 @@ func main() {
 	// 获取对象名称
 	fmt.Println(reflect.Indirect(reflect.ValueOf(a)).Type().Name())
 
+	fmt.Println("***************************************************************")
+
 	// 参数
-	i := "Hello"
+	i := "hello reflect example test"
 	v := make([]reflect.Value, 0)
 	v = append(v, reflect.ValueOf(i))
 
-	// 通过对象值中的方法名称调用方法 ([nljb]) (返回数组因为Go支持多值返回)
+	// 通过对象值中的方法名称调用方法 ([reflectexample]) (返回数组因为Go支持多值返回)
 	fmt.Println(reflect.ValueOf(a).MethodByName("GetName").Call(v))
-	// 通过对值中的子对象名称获取值 (nljb)
+	// 通过对值中的子对象名称获取值 (reflectexample)
 	fmt.Println(reflect.Indirect(reflect.ValueOf(a)).FieldByName("name"))
 	// 是否可以改变这个值 (false)
 	fmt.Println(reflect.Indirect(reflect.ValueOf(a)).FieldByName("name").CanSet())
@@ -65,7 +68,7 @@ func main() {
 	// 不可改变 (false)
 	fmt.Println(reflect.Indirect(reflect.ValueOf(s)).CanSet())
 	// 可以改变
-	//reflect.Indirect(reflect.ValueOf(&s)).SetString("jbnl")
+	reflect.Indirect(reflect.ValueOf(&s)).SetString("reflect test")
 	fmt.Println(reflect.Indirect(reflect.ValueOf(&s)).CanSet())
 
 }
