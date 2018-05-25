@@ -18,15 +18,6 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="benchmark_test.go" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/gotest/benchmark/benchmark_test.go">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="180">
-              <caret line="14" selection-start-line="14" selection-end-line="14" />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="getstruct.go" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/reflect/main/getstruct.go">
           <provider selected="true" editor-type-id="text-editor" />
@@ -53,21 +44,32 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="glide.yaml" pinned="false" current-in-tab="false">
+      <file leaf-file-name="glide.yaml" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/glide.yaml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="225">
-              <caret line="15" column="26" lean-forward="true" selection-start-line="15" selection-start-column="26" selection-end-line="15" selection-end-column="26" />
+            <state relative-caret-position="270">
+              <caret line="18" column="13" lean-forward="true" selection-start-line="18" selection-start-column="13" selection-end-line="18" selection-end-column="13" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="client_protobuf.go" pinned="false" current-in-tab="true">
+      <file leaf-file-name="client_protobuf.go" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/protobuf/main/client_protobuf.go">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-48">
+              <folding>
+                <element signature="e#14#142#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="leveldbdemo.go" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/leveldb/main/leveldbdemo.go">
           <provider selected="true" editor-type-id="text-editor">
             <state>
               <folding>
-                <element signature="e#14#142#0" expanded="true" />
+                <element signature="e#14#125#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -217,6 +219,17 @@
             <path>
               <item name="godemo" type="b2602c69:ProjectViewProjectNode" />
               <item name="godemo" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="godemo" type="b2602c69:ProjectViewProjectNode" />
+              <item name="godemo" type="462c0819:PsiDirectoryNode" />
+              <item name="leveldb" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="godemo" type="b2602c69:ProjectViewProjectNode" />
+              <item name="godemo" type="462c0819:PsiDirectoryNode" />
+              <item name="leveldb" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="godemo" type="b2602c69:ProjectViewProjectNode" />
@@ -434,13 +447,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/urfave.cli/main/bashcompletion_example.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="465">
-          <caret line="35" column="1" selection-start-line="35" selection-start-column="1" selection-end-line="35" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/urfave.cli/main/customization_example.go">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="60">
@@ -764,19 +770,28 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/glide.yaml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="15" column="26" lean-forward="true" selection-start-line="15" selection-start-column="26" selection-end-line="15" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/protobuf/main/client_protobuf.go">
       <provider selected="true" editor-type-id="text-editor">
-        <state>
+        <state relative-caret-position="-48">
           <folding>
             <element signature="e#14#142#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/leveldb/main/leveldbdemo.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <element signature="e#14#125#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/glide.yaml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="18" column="13" lean-forward="true" selection-start-line="18" selection-start-column="13" selection-end-line="18" selection-end-column="13" />
         </state>
       </provider>
     </entry>

@@ -1,6 +1,8 @@
-### Net Bean ###
-.idea
+# goland
+.idea/
 *.iml
 *.iws
 *.ipr
 
+# vendor
+vendor/
