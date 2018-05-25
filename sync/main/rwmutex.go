@@ -142,7 +142,7 @@ func (df *myDataFile) DataLen() uint32 {
 func main() {
 	//简单测试下结果
 	var dataFile DataFile
-	dataFile, _ = NewDataFile("./mutex_2015_1.dat", 10)
+	dataFile, _ = NewDataFile("./mutex_2018_5.dat", 10)
 
 	var d = map[int]Data{
 		1: []byte("batu_test1"),
