@@ -1,11 +1,11 @@
 package: bjzhang.com/godemo
 import:
-- package: github.com/ebuchman/fail-test
-  version: 95f809107225be108efcf10a3509e4ea6ceef3c4
-- package: golang.org/x/net
-- package: github.com/syndtr/goleveldb/leveldb
+- package: github.com/syndtr/goleveldb
+  subpackages:
+  - leveldb
 - package: github.com/spf13/cobra
-- package: github.com/spf13/cobra/cobra
+  subpackages:
+  - cobra
 - package: google.golang.org/grpc
   version: v1.7.3
   subpackages:
@@ -25,3 +25,11 @@ import:
   - status
   - tap
   - transport
+- package: golang.org/x/crypto
+- package: golang.org/x/net
+- package: github.com/spf13/viper
+  version: ^1.0.2
+- package: github.com/golang/protobuf
+  version: ^1.1.0
+  subpackages:
+  - proto
