@@ -1,10 +1,18 @@
-hash: ea7901a64fd5f39c704764d27e9f43315493a7cebcde8c021b40beffd5a9cbd7
-updated: 2018-05-26T09:23:49.099406+08:00
+hash: f57c4fc7fd4d7877ad84fb79d4dd1a5352ed3afb2081fc5faff1da5f4ef8e2c8
+updated: 2018-05-26T10:16:09.565389+08:00
 imports:
 - name: github.com/fortytw2/leaktest
   version: a5ef70473c97b71626b9abeda80ee92ba2a7de9e
 - name: github.com/fsnotify/fsnotify
   version: 4da3e2cfbabc9f751898f250b49f2439785783a1
+- name: github.com/go-kit/kit
+  version: ca4112baa34cb55091301bdc13b1420a122b1b9e
+  subpackages:
+  - log
+- name: github.com/go-logfmt/logfmt
+  version: 390ab7935ee28ec6b286364bba9b4dd6410cb3d5
+- name: github.com/go-stack/stack
+  version: 259ab82a6cad3992b4e21ff5cac294ccb06474bc
 - name: github.com/gogo/protobuf
   version: 342cbe0a04158f6dcb03ca0079991a51a4248c02
   subpackages:
@@ -33,6 +41,8 @@ imports:
   - json/token
 - name: github.com/inconshreveable/mousetrap
   version: 76626ae9c91c4f2a10f34cad8ce83ea42c93bb75
+- name: github.com/kr/logfmt
+  version: b84e30acd515aadc4b783ad4ff83aff3299bdfe0
 - name: github.com/magiconair/properties
   version: 49d762b9817ba1c2e9d0c69183c2b4a8b8f1d934
 - name: github.com/mitchellh/go-homedir
@@ -87,6 +97,8 @@ imports:
   - leveldb/util
 - name: golang.org/x/crypto
   version: 95a4943f35d008beabde8c11e5075a1b714e6419
+  subpackages:
+  - ripemd160
 - name: golang.org/x/net
   version: d866cfc389cec985d6fda2859936a575a55a3ab6
   subpackages:

@@ -26,6 +26,8 @@ import:
   - tap
   - transport
 - package: golang.org/x/crypto
+  subpackages:
+  - ripemd160
 - package: golang.org/x/net
 - package: github.com/spf13/viper
   version: ^1.0.2
@@ -43,3 +45,7 @@ import:
   version: ^0.8.0
 - package: github.com/fortytw2/leaktest
   version: ^1.2.0
+- package: github.com/go-kit/kit
+  version: ^0.7.0
+  subpackages:
+  - log
