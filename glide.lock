@@ -1,5 +1,5 @@
-hash: f57c4fc7fd4d7877ad84fb79d4dd1a5352ed3afb2081fc5faff1da5f4ef8e2c8
-updated: 2018-05-26T10:16:09.565389+08:00
+hash: fc1d05e1fb9d5d5185ae6face24b77adf277ad96a7f0e745a426f097bdc44e68
+updated: 2018-05-29T22:24:36.465187+08:00
 imports:
 - name: github.com/fortytw2/leaktest
   version: a5ef70473c97b71626b9abeda80ee92ba2a7de9e
@@ -11,6 +11,10 @@ imports:
   - log
 - name: github.com/go-logfmt/logfmt
   version: 390ab7935ee28ec6b286364bba9b4dd6410cb3d5
+- name: github.com/go-sourcemap/sourcemap
+  version: b019cc30c1eaa584753491b0d8f8c1534bf1eb44
+  subpackages:
+  - internal/base64vlq
 - name: github.com/go-stack/stack
   version: 259ab82a6cad3992b4e21ff5cac294ccb06474bc
 - name: github.com/gogo/protobuf
@@ -59,6 +63,15 @@ imports:
   version: 0131db6d737cfbbfb678f8b7d92e55e27ce46224
 - name: github.com/pkg/errors
   version: 645ef00459ed84a119197bfb8d8205042c6df63d
+- name: github.com/robertkrimen/otto
+  version: 3b44b4dcb6c00477273595c312908e2412d07da6
+  subpackages:
+  - ast
+  - dbg
+  - file
+  - parser
+  - registry
+  - token
 - name: github.com/spf13/afero
   version: 57afd63c68602b63ed976de00dd066ccb3c319db
   subpackages:
@@ -145,6 +158,10 @@ imports:
   - status
   - tap
   - transport
+- name: gopkg.in/sourcemap.v1
+  version: 6e83acea0053641eff084973fee085f0c193c61a
+  subpackages:
+  - base64vlq
 - name: gopkg.in/urfave/cli.v1
   version: cfb38830724cc34fedffe9a2a29fb54fa9169cd1
 - name: gopkg.in/yaml.v2

@@ -49,3 +49,4 @@ import:
   version: ^0.7.0
   subpackages:
   - log
+- package: github.com/robertkrimen/otto
