@@ -50,3 +50,6 @@ import:
   subpackages:
   - log
 - package: github.com/robertkrimen/otto
+- package: github.com/ethereum/go-ethereum
+  repo: https://github.com/ethereum/go-ethereum.git
+  version: ^2.0.0
