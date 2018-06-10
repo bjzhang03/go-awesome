@@ -7,17 +7,17 @@ cd kafka_2.12-0.10.2.1
 ```
 * 启动服务
 ```bash
-#1.启动zookeeper
+//1.启动zookeeper
 bin/zookeeper-server-start.sh config/zookeeper.properties &
-#2.启动kafka
+//2.启动kafka
 bin/kafka-server-start.sh config/server.properties &
 
 ```
 * 创建Topic
 ```bash
-#创建Topic
+//创建Topic
 bin/kafka-topics.sh --create --zookeeper localhost:2181 --replication-factor 1 --partitions 1 --topic test
-#列出Topic是否创建成功
+//列出Topic是否创建成功
 bin/kafka-topics.sh --list --zookeeper localhost:2181
 
 ```
