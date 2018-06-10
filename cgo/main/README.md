@@ -6,11 +6,12 @@
 * 在go中通过cgo LDFLAGS指明Lib所在的地址，通过cgo CFLAGS指令include所在的地址，即可调用
 
 在这里我走了一些弯路，供参考：
-* 忽略#cgo LDFLAGS #cgo CFLAGS以为是被注释的部门，其实很重要
+* 忽略#cgo LDFLAGS #cgo CFLAGS以为是被注释的部分，其实很重要
 * c.h文件中忽视#ifdef __cplusplus该指令指明内部使用c++的方式进行编译
 * 忽略test.go文件中编译制导指令　-lstdc++ 很关键
 
 最后运行的命令
+
 ```bash
 ./build.sh
 go build test.go
