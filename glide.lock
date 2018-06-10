@@ -1,64 +1,23 @@
-hash: 95419fc12ad251e0728652116876a86c2c6ad1f382b06b5576ab180a8a8e4e8f
-updated: 2018-05-31T11:51:40.940045+08:00
+hash: 66cf346543eaf7b18df446c6d4cec6f4bab223824aee9f19224dc1091ab9907c
+updated: 2018-06-10T17:33:20.671599+08:00
 imports:
+- name: github.com/bsm/sarama-cluster
+  version: d98592677c0aa08d8aafb882d344fb461682b722
+- name: github.com/davecgh/go-spew
+  version: 346938d642f2ec3594ed81d874461961cd0faa76
+  subpackages:
+  - spew
+- name: github.com/eapache/go-resiliency
+  version: ea41b0fad31007accc7f806884dcdf3da98b79ce
+  subpackages:
+  - breaker
+- name: github.com/eapache/go-xerial-snappy
+  version: bb955e01b9346ac19dc29eb16586c90ded99a98c
+- name: github.com/eapache/queue
+  version: 093482f3f8ce946c05bcba64badd2c82369e084d
 - name: github.com/ethereum/go-ethereum
   version: 198ef97108ec257d49a7b593a9c6fe49961319c0
-  subpackages:
-    - accounts
-    - accounts/keystore
-    - accounts/usbwallet
-    - cmd/utils
-    - common
-    - common/bitutil
-    - common/hexutil
-    - common/math
-    - common/mclock
-    - consensus
-    - consensus/clique
-    - consensus/ethash
-    - consensus/misc
-    - console
-    - core
-    - core/state
-    - core/types
-    - core/vm
-    - crypto
-    - crypto/ecies
-    - crypto/randentropy
-    - crypto/secp256k1
-    - crypto/sha3
-    - eth
-    - eth/downloader
-    - eth/fetcher
-    - eth/filters
-    - eth/gasprice
-    - ethclient
-    - ethdb
-    - ethstats
-    - event
-    - internal/debug
-    - internal/ethapi
-    - internal/jsre
-    - internal/jsre/deps
-    - internal/web3ext
-    - les
-    - les/flowcontrol
-    - light
-    - log
-    - log/term
-    - metrics
-    - miner
-    - node
-    - p2p
-    - p2p/discover
-    - p2p/discv5
-    - p2p/nat
-    - p2p/netutil
-    - params
-    - rlp
-    - rpc
-    - trie
-    - whisper/whisperv5
+  repo: https://github.com/ethereum/go-ethereum.git
 - name: github.com/fortytw2/leaktest
   version: a5ef70473c97b71626b9abeda80ee92ba2a7de9e
 - name: github.com/fsnotify/fsnotify
@@ -115,8 +74,16 @@ imports:
   - ast
 - name: github.com/pelletier/go-toml
   version: 0131db6d737cfbbfb678f8b7d92e55e27ce46224
+- name: github.com/pierrec/lz4
+  version: ed8d4cc3b461464e69798080a0092bd028910298
+- name: github.com/pierrec/xxHash
+  version: f051bb7f1d1aaf1b5a665d74fb6b0217712c69f7
+  subpackages:
+  - xxHash32
 - name: github.com/pkg/errors
   version: 645ef00459ed84a119197bfb8d8205042c6df63d
+- name: github.com/rcrowley/go-metrics
+  version: 1f30fe9094a513ce4c700b9a54458bbb0c96996c
 - name: github.com/robertkrimen/otto
   version: 49fee9c1c0db1c366003ede4cc665f9924a97521
   subpackages:
@@ -126,6 +93,10 @@ imports:
   - parser
   - registry
   - token
+- name: github.com/sdbaiguanghe/glog
+  version: ca74c069d4e18e6d0ee90665a15d9234c5dcf83c
+- name: github.com/Shopify/sarama
+  version: 35324cf48e33d8260e1c7c18854465a904ade249
 - name: github.com/spf13/afero
   version: 57afd63c68602b63ed976de00dd066ccb3c319db
   subpackages:
@@ -143,7 +114,7 @@ imports:
 - name: github.com/spf13/viper
   version: b5e8006cbee93ec955a89ab31e0e3ce3204f3736
 - name: github.com/stretchr/testify
-  version: 12b6f73e6084dad08a7c6e575284b177ecafbc71
+  version: f35b8ab0b5a2cef36673838d662e249dd9c94686
   subpackages:
   - assert
   - require
@@ -200,7 +171,6 @@ imports:
   - codes
   - connectivity
   - credentials
-  - grpclb/grpc_lb_v1
   - grpclb/grpc_lb_v1/messages
   - grpclog
   - internal

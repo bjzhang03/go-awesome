@@ -51,5 +51,11 @@ import:
   - log
 - package: github.com/robertkrimen/otto
 - package: github.com/ethereum/go-ethereum
-  repo: https://github.com/ethereum/go-ethereum.git
   version: ^2.0.0
+  repo: https://github.com/ethereum/go-ethereum.git
+- package: github.com/Shopify/sarama
+  version: ^1.17.0
+- package: github.com/pierrec/xxHash
+  version: ^0.1.1
+  subpackages:
+  - xxHash32
