@@ -68,7 +68,7 @@ func addTwoNumbers(l1 *ListNode, l2 *ListNode) *ListNode {
 
 	return result.Next
 }
-
+//success
 func main() {
 	var l1 *ListNode
 	var l2 *ListNode
