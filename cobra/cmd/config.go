@@ -48,7 +48,6 @@ var echocount int
 func init() {
 	rootCmd.AddCommand(configCmd)
 	//添加标签
-
 	configCmd.PersistentFlags().IntVarP(&echocount, "echocount", "e", 1, "verbose output")
 
 	// Here you will define your flags and configuration settings.
