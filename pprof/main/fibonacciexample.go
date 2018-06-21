@@ -15,6 +15,7 @@ var (
 
 func main() {
 	log.Println("begin")
+	//对flag的参数进行转化
 	flag.Parse()
 	if *cpuprofile != "" {
 		f, err := os.Create(*cpuprofile)
