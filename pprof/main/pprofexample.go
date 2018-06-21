@@ -7,6 +7,7 @@ import (
 	"runtime/pprof"
 )
 
+//这里的重复定义是不需要修改的
 var cpuprofile = flag.String("cpuprofile", "", "write cpu profile to file")
 
 func main() {
