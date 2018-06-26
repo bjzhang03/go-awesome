@@ -20,7 +20,7 @@ type WangLan struct {
 }
 
 func (this *WangLan) Say(msg string) {
-	fmt.Printf("王兰说：%s\n", msg)
+	fmt.Printf("WangLan Say：%s\n", msg)
 }
 
 func (this *WangLan) Listen(msg string) string {
@@ -38,7 +38,7 @@ type JiangLou struct {
 }
 
 func (this *JiangLou) Say(msg string) {
-	fmt.Printf("江娄说：%s\n", msg)
+	fmt.Printf("JiangLou Say：%s\n", msg)
 }
 
 func (this *JiangLou) Listen(msg string) string {
