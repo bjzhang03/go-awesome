@@ -1,10 +1,8 @@
-hash: 66cf346543eaf7b18df446c6d4cec6f4bab223824aee9f19224dc1091ab9907c
-updated: 2018-06-10T17:33:20.671599+08:00
+hash: 1b07bcde45efcd1037b9f5aaccdbead8833fc38b51a293671d57a91c02ba14c7
+updated: 2018-06-26T17:41:34.560159+08:00
 imports:
-- name: github.com/bsm/sarama-cluster
-  version: d98592677c0aa08d8aafb882d344fb461682b722
 - name: github.com/davecgh/go-spew
-  version: 346938d642f2ec3594ed81d874461961cd0faa76
+  version: 8991bc29aa16c548c550c7ff78260e27b9ab7c73
   subpackages:
   - spew
 - name: github.com/eapache/go-resiliency
@@ -29,7 +27,7 @@ imports:
 - name: github.com/go-logfmt/logfmt
   version: 390ab7935ee28ec6b286364bba9b4dd6410cb3d5
 - name: github.com/go-stack/stack
-  version: 54be5f394ed2c3e19dac9134a40a95ba5a017f7b
+  version: 259ab82a6cad3992b4e21ff5cac294ccb06474bc
 - name: github.com/gogo/protobuf
   version: 1adfc126b41513cc696b209667c8656ea7aac67c
   subpackages:
@@ -93,8 +91,6 @@ imports:
   - parser
   - registry
   - token
-- name: github.com/sdbaiguanghe/glog
-  version: ca74c069d4e18e6d0ee90665a15d9234c5dcf83c
 - name: github.com/Shopify/sarama
   version: 35324cf48e33d8260e1c7c18854465a904ade249
 - name: github.com/spf13/afero
@@ -110,7 +106,7 @@ imports:
 - name: github.com/spf13/jwalterweatherman
   version: 12bd96e66386c1960ab0f74ced1362f66f552f7b
 - name: github.com/spf13/pflag
-  version: 1ce0cc6db4029d97571db82f85092fccedb572ce
+  version: 4c012f6dcd9546820e378d0bdda4d8fc772cdfea
 - name: github.com/spf13/viper
   version: b5e8006cbee93ec955a89ab31e0e3ce3204f3736
 - name: github.com/stretchr/testify
@@ -119,7 +115,7 @@ imports:
   - assert
   - require
 - name: github.com/syndtr/goleveldb
-  version: 8c81ea47d4c41a385645e133e15510fc6a2a74b4
+  version: c7a14d4b00e222eab6111b4cd1af829c13f53ec2
   subpackages:
   - leveldb
   - leveldb/cache
@@ -133,12 +129,14 @@ imports:
   - leveldb/storage
   - leveldb/table
   - leveldb/util
+- name: github.com/tendermint/go-amino
+  version: 2106ca61d91029c931fd54968c2bb02dc96b1412
 - name: golang.org/x/crypto
-  version: 7f7c0c2d75ebb4e32a21396ce36e87b6dadc91c9
+  version: 91a49db82a88618983a78a06c1cbd4e00ab749ab
   subpackages:
   - ripemd160
 - name: golang.org/x/net
-  version: 02ac38e2528ff4adea90f184d71a3faa04b4b1b0
+  version: 2fb46b16b8dda405028c50f7c7f0f9dd1fa6bfb1
   subpackages:
   - context
   - html
@@ -154,14 +152,14 @@ imports:
   subpackages:
   - unix
 - name: golang.org/x/text
-  version: 836efe42bb4aa16aaa17b9c155d8813d336ed720
+  version: e19ae1496984b1c655b8044a65c0300a3c878dd3
   subpackages:
   - secure/bidirule
   - transform
   - unicode/bidi
   - unicode/norm
 - name: google.golang.org/genproto
-  version: b0a3dcfcd1a9bd48e63634bd8802960804cf8315
+  version: 4eb30f4778eed4c258ba66527a0d4f9ec8a36c45
   subpackages:
   - googleapis/rpc/status
 - name: google.golang.org/grpc
