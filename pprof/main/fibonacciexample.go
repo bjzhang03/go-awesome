@@ -10,15 +10,15 @@ import (
 
 var (
 	//定义外部输入文件名字
-	cpuprofile = flag.String("cpuprofile", "", "write cpu profile to file.")
+	cpuprofile2 = flag.String("cpuprofile", "", "write cpu profile to file.")
 )
 
 func main() {
 	log.Println("begin")
 	//对flag的参数进行转化
 	flag.Parse()
-	if *cpuprofile != "" {
-		f, err := os.Create(*cpuprofile)
+	if *cpuprofile2 != "" {
+		f, err := os.Create(*cpuprofile2)
 		if err != nil {
 			log.Fatal(err)
 		}
