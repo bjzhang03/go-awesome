@@ -4,10 +4,10 @@ import (
 	"fmt"
 )
 
-type Html []interface{}
+type Html2 []interface{}
 
 func main() {
-	html := make(Html, 5)
+	html := make(Html2, 5)
 	html[0] = "div"
 	html[1] = "span"
 	html[2] = []byte("script")

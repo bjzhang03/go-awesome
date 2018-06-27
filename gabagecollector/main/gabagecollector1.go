@@ -3,6 +3,8 @@ package main
 import (
 	"time"
 	"fmt"
+	"runtime/debug"
+	"runtime"
 )
 
 const (
@@ -12,7 +14,7 @@ const (
 
 type (
 	message []byte
-	buffer  [windowSize]message
+	buffer [windowSize]message
 )
 
 var worst time.Duration
@@ -37,8 +39,12 @@ func pushMsg(b *buffer, highID int) {
 
 func main() {
 	var b buffer
+	// 主动调用垃圾回收机制的两种方案
+	runtime.GC()
 	for i := 0; i < msgCount; i++ {
 		pushMsg(&b, i)
 	}
+	// 主动调用垃圾回收机制的两种方案
+	debug.FreeOSMemory()
 	fmt.Println("Worst push time: ", worst)
 }

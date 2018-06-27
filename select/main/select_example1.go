@@ -9,7 +9,7 @@ func main() {
 	ch2 := make(chan int, 1)
 
 	//走case1的情形
-	//ch1 <- 1
+	ch1 <- 1
 
 	select {
 	case e1 := <-ch1:
