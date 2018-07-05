@@ -31,5 +31,4 @@ func main() {
 	divCall := client.Go("Arith.Divide", args, quotient, nil)
 	replyCall := <-divCall.Done
 	fmt.Println(replyCall)
-
 }
