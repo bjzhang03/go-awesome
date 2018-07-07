@@ -1,4 +1,4 @@
-package: bjzhang.com/godemo
+package: bjzhang03.com/godemo
 import:
 - package: github.com/syndtr/goleveldb
   subpackages:
@@ -63,3 +63,5 @@ import:
   version: ^0.10.1
 - package: github.com/go-logfmt/logfmt
   version: ^0.3.0
+- package: github.com/urfave/cli
+  version: ^1.20.0

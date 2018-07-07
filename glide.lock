@@ -1,5 +1,5 @@
-hash: 4adc3e5fc15567ba776f7591222f886b0a0571740a8649d2ad33d605994eca94
-updated: 2018-07-05T16:33:41.71523+08:00
+hash: 33937b37f1a5de2c644a016e070731b94f67a14df9046e2627666cb03c910763
+updated: 2018-07-07T10:21:43.879728+08:00
 imports:
 - name: github.com/davecgh/go-spew
   version: 8991bc29aa16c548c550c7ff78260e27b9ab7c73
@@ -22,6 +22,10 @@ imports:
   version: 4da3e2cfbabc9f751898f250b49f2439785783a1
 - name: github.com/go-kit/kit
   version: ca4112baa34cb55091301bdc13b1420a122b1b9e
+  subpackages:
+  - log
+- name: github.com/go-log/log
+  version: ""
   subpackages:
   - log
 - name: github.com/go-logfmt/logfmt
@@ -131,6 +135,8 @@ imports:
   - leveldb/util
 - name: github.com/tendermint/go-amino
   version: 2106ca61d91029c931fd54968c2bb02dc96b1412
+- name: github.com/urfave/cli
+  version: cfb38830724cc34fedffe9a2a29fb54fa9169cd1
 - name: golang.org/x/crypto
   version: 91a49db82a88618983a78a06c1cbd4e00ab749ab
   subpackages:
