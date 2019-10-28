@@ -1,13 +1,13 @@
 package main
 
 import (
-	"net"
-	"fmt"
-	"time"
 	"bufio"
-	"os"
-	stProto "bjzhang.com/godemo/protobuf/proto"
+	"fmt"
+	stProto "github.com/bjzhang03/exlocus-godemo/protobuf/proto"
 	"github.com/golang/protobuf/proto"
+	"net"
+	"os"
+	"time"
 )
 
 func main() {

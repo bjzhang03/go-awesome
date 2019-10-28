@@ -5,7 +5,7 @@ import (
 	"os"
 	"google.golang.org/grpc"
 	"strconv"
-	pb "bjzhang.com/godemo/grpc/proto"
+	pb "github.com/bjzhang03/exlocus-godemo/grpc/proto"
 	"golang.org/x/net/context"
 )
 

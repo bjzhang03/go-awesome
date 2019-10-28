@@ -1,10 +1,10 @@
 package main
 
 import (
-	"net"
 	"fmt"
+	stProto "github.com/bjzhang03/exlocus-godemo/protobuf/proto"
+	"net"
 	"os"
-	stProto "bjzhang.com/godemo/protobuf/proto"
 
 	"github.com/golang/protobuf/proto"
 )

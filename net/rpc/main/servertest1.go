@@ -5,7 +5,7 @@ import (
 	"net"
 	"log"
 	"net/http"
-	serverdata "bjzhang.com/godemo/net/rpc/server"
+	serverdata "bjzhang.com/exlocus-godemo/net/rpc/server"
 	"fmt"
 )
 

@@ -3,7 +3,7 @@ package main
 import (
 	"log"
 	"net/rpc"
-	"bjzhang.com/godemo/net/rpc/server"
+	"bjzhang.com/exlocus-godemo/net/rpc/server"
 	"fmt"
 	"net"
 	"net/http"

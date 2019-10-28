@@ -4,7 +4,7 @@ import (
 	"log"
 	"os"
 	"net"
-	pb "bjzhang.com/godemo/grpc/proto"
+	pb "github.com/bjzhang03/exlocus-godemo/grpc/proto"
 	"google.golang.org/grpc"
 	"golang.org/x/net/context"
 )
