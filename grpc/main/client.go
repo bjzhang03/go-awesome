@@ -27,20 +27,20 @@ func main() {
 	status = pb.UserStatus_ONLINE
 
 	userInfo := &pb.UserInfo{
-		Id:     20,         //proto.Int32(10),
-		Name:   "grpcTest", //proto.String("XCL-gRPC"),
+		Id:     30,         //proto.Int32(10),
+		Name:   "grpcTest111", //proto.String("XCL-gRPC"),
 		Status: status,
 	}
 
 	r, err := c.Login(context.Background(), userInfo)
 	if err != nil {
-		log.Fatalf("登录失败!  %v", err)
+		log.Fatalf("Login Failed!  %v", err)
 	}
 	log.Println("Login():", r)
 
 	uid, err := strconv.ParseInt(r.Reply, 10, 32)
 	if err != nil {
-		log.Fatalf("非数字  %v", err)
+		log.Fatalf("Error:  %v", err)
 	}
 
 	userID := &pb.UserID{int32(uid)}
