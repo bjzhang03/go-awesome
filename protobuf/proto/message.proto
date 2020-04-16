@@ -1,13 +1,12 @@
-syntax = "proto3";  //指定版本,必须要写(proto3、proto2),并且必须在文件的第一行指定
+syntax = "proto3"; //指定版本,必须要写(proto3、proto2),并且必须在文件的第一行指定
 package proto;
 
-enum FOO
-{
+enum FOO {
     X = 0;
 };
 
 //message是固定的,UserInfo是类名,可以随意指定，符合规范即可
-message UserInfo{
+message UserInfo {
     //消息
     string message = 1;
     //消息大小
@@ -17,3 +16,24 @@ message UserInfo{
     //其他信息
     string other = 4;
 }
+
+// The greeter service definition.
+service Greeter {
+    // Sends a greeting
+    rpc SayHello (stream HelloRequest) returns (stream HelloReply) {
+    }
+}
+
+// The request message containing the user's name.
+message HelloRequest {
+    string name = 1;
+}
+
+// The response message containing the greetings
+message HelloReply {
+    string message = 1;
+}
+
+// 使用说明
+// protoc --go_out=. *.proto
+// protoc --go_out=plugins=grpc:. *.proto
