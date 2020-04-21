@@ -46,11 +46,13 @@ require (
 	github.com/syndtr/goleveldb v0.0.0-20180228040145-c7a14d4b00e2
 	github.com/tendermint/go-amino v0.0.0-20180615192746-2106ca61d910
 	github.com/urfave/cli v1.20.0
-	golang.org/x/crypto v0.0.0-20180228161326-91a49db82a88
-	golang.org/x/net v0.0.0-20180906233101-161cd47e91fd
+	golang.org/x/crypto v0.0.0-20190308221718-c2843e01d9a2
+	golang.org/x/net v0.0.0-20200324143707-d3edc9973b7e
 	golang.org/x/sync v0.0.0-20190911185100-cd5d95a43a6e // indirect
-	google.golang.org/genproto v0.0.0-20180125080656-4eb30f4778ee // indirect
-	google.golang.org/grpc v1.7.3
+	golang.org/x/sys v0.0.0-20200420163511-1957bb5e6d1f // indirect
+	golang.org/x/text v0.3.2 // indirect
+	google.golang.org/genproto v0.0.0-20200420144010-e5e8543f8aeb // indirect
+	google.golang.org/grpc v1.28.1
 	gopkg.in/check.v1 v1.0.0-20190902080502-41f04d3bba15 // indirect
 	gopkg.in/sourcemap.v1 v1.0.5 // indirect
 	gopkg.in/urfave/cli.v1 v1.20.0

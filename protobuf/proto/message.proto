@@ -17,23 +17,3 @@ message UserInfo {
     string other = 4;
 }
 
-// The greeter service definition.
-service Greeter {
-    // Sends a greeting
-    rpc SayHello (stream HelloRequest) returns (stream HelloReply) {
-    }
-}
-
-// The request message containing the user's name.
-message HelloRequest {
-    string name = 1;
-}
-
-// The response message containing the greetings
-message HelloReply {
-    string message = 1;
-}
-
-// 使用说明
-// protoc --go_out=. *.proto
-// protoc --go_out=plugins=grpc:. *.proto
