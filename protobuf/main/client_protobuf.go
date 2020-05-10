@@ -2,11 +2,12 @@ package main
 
 import (
 	"bufio"
-	"fmt"
 	stProto "github.com/bjzhang03/exlocus-godemo/protobuf/proto"
 	"github.com/golang/protobuf/proto"
+	"log"
 	"net"
 	"os"
+	"strings"
 	"time"
 )
 
@@ -17,21 +18,24 @@ func main() {
 
 	//连接服务器
 	for conn, err = net.Dial("tcp", strIP); err != nil; conn, err = net.Dial("tcp", strIP) {
-		fmt.Println("connect", strIP, "fail")
+		log.Printf("connect to %s failed", strIP)
 		time.Sleep(time.Second)
-		fmt.Println("reconnect...")
+		log.Printf("reconnect...")
 	}
-	fmt.Println("connect", strIP, "success")
+	log.Printf("connect to %s success!", strIP)
 	defer conn.Close()
 
 	//发送消息
 	cnt := 0
+	// 从输入获取数据
 	sender := bufio.NewScanner(os.Stdin)
 	for sender.Scan() {
 		cnt++
+		// 根据输入构造结构体对象,然后直接发送出去
+		msgs := strings.Split(sender.Text(), ",")
 		stSend := &stProto.UserInfo{
-			Message: sender.Text(),
-			Length:  *proto.Int(len(sender.Text())),
+			Message: msgs,
+			Length:  *proto.Int(len(msgs)),
 			Cnt:     *proto.Int(cnt),
 			Other:   strIP,
 		}
@@ -44,8 +48,11 @@ func main() {
 
 		//发送
 		conn.Write(pData)
-		if sender.Text() == "stop" {
-			return
+		for _, val := range msgs {
+			if val == "stop" {
+				return
+			}
 		}
+
 	}
 }

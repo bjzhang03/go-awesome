@@ -24,10 +24,12 @@ func main() {
 		log.Fatalf("did not connect: %v", err)
 	}
 	defer conn.Close()
+	// 使用前面的链接创建一个客户端
 	c := pb.NewGreeterClient(conn)
 
 	// Contact the server and print out its response.
 	name := defaultName
+	// 如果没有输入的参数则使用默认的参数数据
 	if len(os.Args) > 1 {
 		name = os.Args[1]
 	}

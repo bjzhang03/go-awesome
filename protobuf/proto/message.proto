@@ -1,19 +1,21 @@
 syntax = "proto3"; //指定版本,必须要写(proto3、proto2),并且必须在文件的第一行指定
+option go_package = ".;proto";
 package proto;
 
 enum FOO {
-    X = 0;
+  X = 0;
 };
 
 //message是固定的,UserInfo是类名,可以随意指定，符合规范即可
 message UserInfo {
-    //消息
-    string message = 1;
-    //消息大小
-    int32 length = 2;
-    //消息计数
-    int32 cnt = 3;
-    //其他信息
-    string other = 4;
+  //消息
+  /*repeated表明数据是可以重复的数据,表示的是一个数组*/
+  repeated string message = 1;
+  //消息大小
+  int32 length = 2;
+  //消息计数
+  int32 cnt = 3;
+  //其他信息
+  string other = 4;
 }
 

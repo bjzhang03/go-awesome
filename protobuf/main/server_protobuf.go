@@ -1,8 +1,8 @@
 package main
 
 import (
-	"fmt"
 	stProto "github.com/bjzhang03/exlocus-godemo/protobuf/proto"
+	"log"
 	"net"
 	"os"
 
@@ -21,7 +21,7 @@ func main() {
 		if err != nil {
 			panic(err)
 		}
-		fmt.Println("new connect", conn.RemoteAddr())
+		log.Printf("new connect to %s", conn.RemoteAddr().String())
 		go readMessage(conn)
 	}
 }
@@ -45,9 +45,11 @@ func readMessage(conn net.Conn) {
 			panic(err)
 		}
 
-		fmt.Println("receive", conn.RemoteAddr(), stReceive)
-		if stReceive.Message == "stop" {
-			os.Exit(1)
+		log.Printf("receive message success! ipaddress := %s, info := %s", conn.RemoteAddr(), stReceive.String())
+		for _, val := range stReceive.Message {
+			if val == "stop" {
+				os.Exit(0)
+			}
 		}
 	}
 }
