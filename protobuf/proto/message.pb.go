@@ -74,7 +74,7 @@ type UserInfo struct {
 	sizeCache     protoimpl.SizeCache
 	unknownFields protoimpl.UnknownFields
 
-	//消息
+	//repeated表明数据是可以重复的数据,表示的是一个数组
 	Message []string `protobuf:"bytes,1,rep,name=message,proto3" json:"message,omitempty"`
 	//消息大小
 	Length int32 `protobuf:"varint,2,opt,name=length,proto3" json:"length,omitempty"`
