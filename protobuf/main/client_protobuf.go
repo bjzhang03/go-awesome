@@ -40,6 +40,7 @@ func main() {
 			Other:   strIP,
 		}
 
+
 		//protobuf编码
 		pData, err := proto.Marshal(stSend)
 		if err != nil {

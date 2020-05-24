@@ -19,3 +19,19 @@ message UserInfo {
   string other = 4;
 }
 
+
+// 获取指定位置的区块数据的传递过来的参数数据
+message EnumMsg {
+  enum Number {
+    ONE = 0;
+    TWO = 1;
+    THREE=3;
+  }
+
+  oneof Type {
+    int32 start = 1;
+    int32 end = 2;
+  }
+
+  Number number=3;
+}
