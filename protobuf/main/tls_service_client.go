@@ -2,11 +2,11 @@ package main
 
 import (
 	"context"
-	"fmt"
+	"log"
+
 	pb "github.com/bjzhang03/exlocus-godemo/protobuf/proto"
 	"google.golang.org/grpc"
 	"google.golang.org/grpc/credentials"
-	"log"
 )
 
 // Package main implements a client for Greeter service.
@@ -19,9 +19,9 @@ const (
 func main() {
 	// Set up a connection to the server.
 	// TLS连接
-	fmt.Println("client")
+	log.Println("client")
 	creds, err := credentials.NewClientTLSFromFile("./tls/server.pem", "localhost")
-	fmt.Println("cred")
+	log.Println("cred")
 	if err != nil {
 		log.Printf("Failed to create TLS credentials %v", err)
 	}
@@ -30,7 +30,7 @@ func main() {
 		log.Fatalf("did not connect: %v", err)
 	}
 	defer conn.Close()
-	fmt.Println("conn")
+	log.Println("conn")
 	// 使用前面的链接创建一个客户端
 	c := pb.NewGreeterClient(conn)
 
@@ -41,6 +41,5 @@ func main() {
 		log.Fatalf("could not greet: %v", err)
 	}
 	log.Printf("Greeting: %s", r.GetMessage())
-	fmt.Printf("Greeting: %s", r.GetMessage())
 
 }

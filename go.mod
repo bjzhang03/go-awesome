@@ -13,7 +13,7 @@ require (
 	github.com/go-kit/kit v0.7.0
 	github.com/go-logfmt/logfmt v0.3.0
 	github.com/go-stack/stack v1.7.0 // indirect
-	github.com/gogo/protobuf v1.3.1
+	github.com/gogo/protobuf v1.3.1 // indirect
 	github.com/golang/glog v0.0.0-20160126235308-23def4e6c14b // indirect
 	github.com/golang/protobuf v1.4.0
 	github.com/golang/snappy v0.0.0-20170215233205-553a64147049 // indirect

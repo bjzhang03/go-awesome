@@ -4,10 +4,10 @@ package main
 // https://segmentfault.com/a/1190000007933303
 import (
 	"context"
-	"fmt"
-	"google.golang.org/grpc/credentials"
 	"log"
 	"net"
+
+	"google.golang.org/grpc/credentials"
 
 	pb "github.com/bjzhang03/exlocus-godemo/protobuf/proto"
 	"google.golang.org/grpc"
@@ -30,7 +30,7 @@ func (s *serverTls) SayHello(ctx context.Context, in *pb.HelloRequest) (*pb.Hell
 }
 
 func main() {
-	fmt.Println("start")
+	log.Println("start")
 	lis, err := net.Listen("tcp", tlsport)
 	if err != nil {
 		log.Fatalf("failed to listen: %v", err)
@@ -39,16 +39,15 @@ func main() {
 	// TLS认证
 	creds, err := credentials.NewServerTLSFromFile("./tls/server.pem", "./tls/server.key")
 	if err != nil {
-		fmt.Printf("Failed to generate credentials %v", err)
+		log.Printf("Failed to generate credentials %v", err)
 	}
 
-	fmt.Println("tlsf finish")
+	log.Println("tlsf finish")
 	// 实例化grpc Server, 并开启TLS认证
 	s := grpc.NewServer(grpc.Creds(creds))
 	// 注册HelloService
 	pb.RegisterGreeterServer(s, &serverTls{})
 	log.Println("Listen on " + tlsport + " with TLS")
-	fmt.Println("Listen on " + tlsport + " with TLS")
 	if err := s.Serve(lis); err != nil {
 		log.Fatalf("failed to serve: %v", err)
 	}
