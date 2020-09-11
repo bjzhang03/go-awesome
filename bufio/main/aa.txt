@@ -1,0 +1,7 @@
+ReadLine 尝试返回单独的行，不包括行尾的换行符。如果一行大于缓存，isPrefix 会被设置为 true，同时返回该行的开始部分（等于缓存大小的部分）。
+该行剩余的部分就会在下次调用的时候返回。当下次调用返回该行剩余部分时，isPrefix 将会是 false 。跟 ReadSlice 一样，返回的 line 只是 buffer 的引用，
+在下次执行IO操作时，line 会无效。可以将 ReadSlice 中的例子该为 ReadLine 试试。
+注意，返回值中，要么 line 不是 nil，要么 err 非 nil，两者不会同时非 nil。
+ReadLine 返回的文本不会包含行结尾（"\r\n"或者"\n"）。如果输入中没有行尾标识符，不会返回任何指示或者错误。
+从上面的讲解中，我们知道，读取一行，通常会选择 ReadBytes 或 ReadString。不过，正常人的思维，应该用 ReadLine，只是不明白
+为啥 ReadLine 的实现不是通过 ReadBytes，然后清除掉行尾的\n（或\r\n），它现在的实现，用不好会出现意想不到的问题，比如丢数据。个人建议可以这么实现读取一行：
