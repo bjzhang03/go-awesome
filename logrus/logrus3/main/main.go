@@ -13,7 +13,7 @@ func ConfigLocalFilesystemLogger(logPath string, logFileName string, maxAge time
 	baseLogPaht := path.Join(logPath, logFileName)
 	writer, err := rotatelogs.New(
 		baseLogPaht+".%Y%m%d%H%M",
-		//rotatelogs.WithLinkName(baseLogPaht), // 生成软链，指向最新日志文件
+		rotatelogs.WithLinkName(baseLogPaht),      // 生成软链，指向最新日志文件
 		rotatelogs.WithMaxAge(maxAge),             // 文件最大保存时间
 		rotatelogs.WithRotationTime(rotationTime), // 日志切割时间间隔
 	)
@@ -29,6 +29,10 @@ func ConfigLocalFilesystemLogger(logPath string, logFileName string, maxAge time
 		log.PanicLevel: writer,
 	}, &log.TextFormatter{DisableColors: true})
 	log.AddHook(lfHook)
+	log.SetFormatter(&log.TextFormatter{
+		FullTimestamp: true,
+	})
+	log.SetReportCaller(true)
 }
 
 //切割日志和清理过期日志
@@ -47,7 +51,9 @@ func ConfigLocalFilesystemLogger1(filePath string) {
 }
 
 func main() {
-	ConfigLocalFilesystemLogger1("/home/bjzhang03/gocode/src/github.com/bjzhang03/exlocus-godemo/logrus/logrus3/main/log")
+	//ConfigLocalFilesystemLogger1("/home/bjzhang03/gocode/src/github.com/bjzhang03/exlocus-godemo/logrus/logrus3/main/log")
+	ConfigLocalFilesystemLogger("/home/bjzhang03/gocode/src/github.com/bjzhang03/exlocus-godemo/logrus/logrus3/main/",
+		"log", time.Second*60*3, time.Second*60)
 	for {
 		log.Info(111)
 		time.Sleep(500 * time.Millisecond)
