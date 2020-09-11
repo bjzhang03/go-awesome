@@ -1,12 +1,12 @@
 package main
 
 import (
-	"log"
-	"net/rpc"
-	"bjzhang.com/exlocus-godemo/net/rpc/server"
 	"fmt"
+	"github.com/bjzhang03/exlocus-godemo/net/rpc/server"
+	"log"
 	"net"
 	"net/http"
+	"net/rpc"
 )
 
 func main() {

@@ -1,6 +1,8 @@
 package main
 
 import (
+	"log"
+	"os"
 	"sync/atomic"
 	"time"
 )
@@ -14,7 +16,9 @@ func requests() chan int {
 	// 将从外界中接受到的请求放入到channel里
 	return make(chan int)
 }
-
+func init()  {
+	log.SetOutput(os.Stdout)
+}
 func main() {
 	// config变量用来存放该服务的配置信息
 	var config atomic.Value
@@ -25,6 +29,7 @@ func main() {
 		for {
 			time.Sleep(10 * time.Second)
 			// 对应于赋值操作 config = loadConfig()
+			log.Println("111")
 			config.Store(loadConfig())
 		}
 	}()
