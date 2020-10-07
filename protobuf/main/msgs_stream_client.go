@@ -10,7 +10,7 @@ import (
 )
 
 const (
-	ipAddress = "localhost:50051"
+	ipAddress = "127.0.0.1:50051"
 )
 
 func main() {

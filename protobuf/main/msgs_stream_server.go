@@ -11,7 +11,7 @@ import (
 	"time"
 )
 
-const ipPort = ":50051"
+const ipPort = "127.0.0.1:50051"
 
 type streamServer struct {
 }

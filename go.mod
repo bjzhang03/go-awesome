@@ -8,6 +8,7 @@ require (
 	github.com/eapache/go-resiliency v1.1.0 // indirect
 	github.com/eapache/go-xerial-snappy v0.0.0-20160609142408-bb955e01b934 // indirect
 	github.com/eapache/queue v0.0.0-20180227141424-093482f3f8ce // indirect
+	github.com/fastly/go-utils v0.0.0-20180712184237-d95a45783239 // indirect
 	github.com/go-kit/kit v0.7.0
 	github.com/go-logfmt/logfmt v0.3.0
 	github.com/go-stack/stack v1.7.0 // indirect
@@ -16,6 +17,8 @@ require (
 	github.com/google/gofuzz v1.0.0 // indirect
 	github.com/hashicorp/hcl v0.0.0-20171017181929-23c074d0eceb // indirect
 	github.com/inconshreveable/mousetrap v1.0.0 // indirect
+	github.com/jehiah/go-strftime v0.0.0-20171201141054-1d33003b3869 // indirect
+	github.com/jonboulle/clockwork v0.2.2 // indirect
 	github.com/kr/logfmt v0.0.0-20140226030751-b84e30acd515 // indirect
 	github.com/kr/pretty v0.1.0 // indirect
 	github.com/kylelemons/godebug v1.1.0 // indirect
@@ -43,6 +46,7 @@ require (
 	github.com/spf13/pflag v0.0.0-20171106142849-4c012f6dcd95 // indirect
 	github.com/spf13/viper v1.0.2
 	github.com/syndtr/goleveldb v0.0.0-20180228040145-c7a14d4b00e2
+	github.com/tebeka/strftime v0.1.5 // indirect
 	github.com/tendermint/go-amino v0.0.0-20180615192746-2106ca61d910
 	github.com/urfave/cli v1.20.0
 	golang.org/x/crypto v0.0.0-20190308221718-c2843e01d9a2
