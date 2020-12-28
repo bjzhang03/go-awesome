@@ -11,7 +11,7 @@ func main() {
 	if err != nil {
 		log.Fatalf("Get pwd path failed! error := %s", err.Error())
 	}
-	logpath := pwd + "/configs/os"
+	logpath := pwd + "/configs/tmp/os"
 	log.Printf("log path := %s", logpath)
 	_, err = os.Stat(logpath)
 	// 如果目录不存在则创建一个
