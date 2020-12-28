@@ -1,7 +1,7 @@
 package main
 
 import (
-	stProto "github.com/bjzhang03/exlocus-godemo/protobuf/proto"
+	stProto "github.com/bjzhang03/go-awesome/protobuf/proto"
 	"log"
 	"net"
 	"os"

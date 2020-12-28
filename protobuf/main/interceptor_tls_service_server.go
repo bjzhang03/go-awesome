@@ -4,7 +4,7 @@ import (
 	"log"
 	"net"
 
-	pb "github.com/bjzhang03/exlocus-godemo/protobuf/proto"
+	pb "github.com/bjzhang03/go-awesome/protobuf/proto"
 	"golang.org/x/net/context"
 	"google.golang.org/grpc"
 	"google.golang.org/grpc/codes"

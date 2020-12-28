@@ -1,12 +1,12 @@
 package main
 
 import (
+	pb "github.com/bjzhang03/go-awesome/grpc/proto"
+	"golang.org/x/net/context"
+	"google.golang.org/grpc"
 	"log"
 	"os"
-	"google.golang.org/grpc"
 	"strconv"
-	pb "github.com/bjzhang03/exlocus-godemo/grpc/proto"
-	"golang.org/x/net/context"
 )
 
 const (
@@ -27,7 +27,7 @@ func main() {
 	status = pb.UserStatus_ONLINE
 
 	userInfo := &pb.UserInfo{
-		Id:     30,         //proto.Int32(10),
+		Id:     30,            //proto.Int32(10),
 		Name:   "grpcTest111", //proto.String("XCL-gRPC"),
 		Status: status,
 	}
