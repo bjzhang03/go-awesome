@@ -8,6 +8,7 @@ import (
 	"fmt"
 )
 
+/*ecdsa的签名和验证*/
 func main() {
 	key, err := ecdsa.GenerateKey(elliptic.P384(), rand.Reader)
 	if err != nil {
