@@ -5,6 +5,7 @@ import (
 	"github.com/pkg/errors"
 	"github.com/rifflock/lfshook"
 	log "github.com/sirupsen/logrus"
+	"os"
 	"path"
 	"time"
 )
@@ -51,8 +52,22 @@ func ConfigLocalFilesystemLogger1(filePath string) {
 }
 
 func main() {
+	// 定义一个文件
+	pwd, err := os.Getwd()
+	if err != nil {
+		log.Fatalf("Get pwd path failed! error := %s", err.Error())
+	}
+	logpath := pwd + "/configs/tmp/logrus"
+	log.Printf("log path := %s", logpath)
+	_, err = os.Stat(logpath)
+	// 如果目录不存在则创建一个
+	if err != nil {
+		if !os.IsExist(err) {
+			os.MkdirAll(logpath, os.ModePerm)
+		}
+	}
 	//ConfigLocalFilesystemLogger1("/home/bjzhang03/gocode/src/github.com/bjzhang03/exlocus-godemo/logrus/logrus3/main/log")
-	ConfigLocalFilesystemLogger("/home/bjzhang03/gocode/src/github.com/bjzhang03/exlocus-godemo/logrus/logrus3/main/",
+	ConfigLocalFilesystemLogger(logpath+"/data/",
 		"log", time.Second*60*3, time.Second*60)
 	for {
 		log.Info(111)

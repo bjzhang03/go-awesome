@@ -1,12 +1,12 @@
 package main
 
 import (
-	"log"
-	"os"
-	"net"
-	pb "github.com/bjzhang03/exlocus-godemo/grpc/proto"
-	"google.golang.org/grpc"
+	pb "github.com/bjzhang03/go-awesome/grpc/proto"
 	"golang.org/x/net/context"
+	"google.golang.org/grpc"
+	"log"
+	"net"
+	"os"
 )
 
 func main() {

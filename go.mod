@@ -1,4 +1,4 @@
-module github.com/bjzhang03/exlocus-godemo
+module github.com/bjzhang03/go-awesome
 
 go 1.12
 

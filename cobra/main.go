@@ -14,7 +14,7 @@
 
 package main
 
-import "github.com/bjzhang03/exlocus-godemo/cobra/cmd"
+import "github.com/bjzhang03/go-awesome/cobra/cmd"
 
 func main() {
 	cmd.Execute()

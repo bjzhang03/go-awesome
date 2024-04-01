@@ -1,13 +1,13 @@
 package main
 
 import (
-	"time"
+	"fmt"
+	"github.com/naoina/toml"
 	"net"
 	"os"
 	"os/exec"
 	"path"
-	"fmt"
-	"github.com/naoina/toml"
+	"time"
 )
 
 type tomlConfig struct {
@@ -35,7 +35,6 @@ type ServerInfo struct {
 }
 
 func main() {
-
 	currentPath, err := os.Getwd()
 	if err != nil {
 		panic(err)
@@ -55,7 +54,7 @@ func main() {
 	wd, _ := os.Getwd()
 	fmt.Println("exec folder absolute path:", wd)
 
-	f, err := os.Open(currentPath+"/example.toml")
+	f, err := os.Open(currentPath + "/configs/toml/example.toml")
 	if err != nil {
 		panic(err)
 	}

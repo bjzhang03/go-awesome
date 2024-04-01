@@ -3,7 +3,7 @@ package main
 import (
 	"context"
 	"fmt"
-	pb "github.com/bjzhang03/exlocus-godemo/protobuf/proto"
+	pb "github.com/bjzhang03/go-awesome/protobuf/proto"
 	"google.golang.org/grpc"
 	"log"
 	"time"

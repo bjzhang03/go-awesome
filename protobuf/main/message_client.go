@@ -2,7 +2,7 @@ package main
 
 import (
 	"bufio"
-	stProto "github.com/bjzhang03/exlocus-godemo/protobuf/proto"
+	stProto "github.com/bjzhang03/go-awesome/protobuf/proto"
 	"github.com/golang/protobuf/proto"
 	"log"
 	"net"
@@ -39,7 +39,6 @@ func main() {
 			Cnt:     *proto.Int(cnt),
 			Other:   strIP,
 		}
-
 
 		//protobuf编码
 		pData, err := proto.Marshal(stSend)

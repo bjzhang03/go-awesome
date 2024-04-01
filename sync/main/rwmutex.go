@@ -1,11 +1,12 @@
 package main
 
 import (
-	"os"
-	"sync"
+	"errors"
 	"fmt"
 	"io"
-	"errors"
+	"log"
+	"os"
+	"sync"
 	"time"
 )
 
@@ -140,9 +141,23 @@ func (df *myDataFile) DataLen() uint32 {
 }
 
 func main() {
+	// 定义一个文件
+	pwd, err := os.Getwd()
+	if err != nil {
+		log.Fatalf("Get pwd path failed! error := %s", err.Error())
+	}
+	logpath := pwd + "/configs/tmp/sync"
+	log.Printf("log path := %s", logpath)
+	_, err = os.Stat(logpath)
+	// 如果目录不存在则创建一个
+	if err != nil {
+		if !os.IsExist(err) {
+			os.MkdirAll(logpath, os.ModePerm)
+		}
+	}
 	//简单测试下结果
 	var dataFile DataFile
-	dataFile, _ = NewDataFile("./mutex_2018_5.dat", 10)
+	dataFile, _ = NewDataFile(logpath+"/mutex_2018_5.dat", 10)
 
 	var d = map[int]Data{
 		1: []byte("batu_test1"),

@@ -3,6 +3,9 @@
 *.iml
 *.iws
 *.ipr
+# 生成的各种log文件
+*.log
 
 # vendor
 vendor/
+configs/tmp/

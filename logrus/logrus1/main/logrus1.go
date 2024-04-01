@@ -1,11 +1,9 @@
 package main
 
-import (
-	log "github.com/sirupsen/logrus"
-)
+import "github.com/sirupsen/logrus"
 
 func main() {
-	log.WithFields(log.Fields{
+	logrus.WithFields(logrus.Fields{
 		"animal": "walrus",
 	}).Info("A walrus appears")
 }

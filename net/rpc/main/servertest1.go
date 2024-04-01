@@ -2,7 +2,7 @@ package main
 
 import (
 	"fmt"
-	serverdata "github.com/bjzhang03/exlocus-godemo/net/rpc/server"
+	serverdata "github.com/bjzhang03/go-awesome/net/rpc/server"
 	"log"
 	"net"
 	"net/http"
